@@ -1,1 +1,0 @@
-awk '!seen[$0]++' DomainNames.txt >> filteredDomains.txt

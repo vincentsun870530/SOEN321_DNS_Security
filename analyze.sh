@@ -2,8 +2,8 @@
 read -p "Enter the txt file to analyze: " x;
 read -p "Enter result output txt file: " y;
 
-printf > y;
-echo These domains are blocked: >> y;
+printf > $y;
+echo These domains are blocked: >> $y;
 numOfDomains=0;
 numOfDomainsBlocked=0;
 for i in `cat $x`; 

@@ -1,0 +1,16 @@
+Name servers of [pornhub.com]
+服务器:  family.dns.yandex.ru
+Address:  77.88.8.7
+
+名称:    pornhub.com
+Addresses:  2a02:6b8::b10c:babe
+	  93.158.134.250
+
+Name servers of [91porn.com]
+服务器:  family.dns.yandex.ru
+Address:  77.88.8.7
+
+名称:    91porn.com
+Addresses:  2a02:6b8::b10c:babe
+	  93.158.134.250
+

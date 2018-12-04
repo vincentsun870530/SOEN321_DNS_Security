@@ -1,0 +1,1 @@
+./checkdns.sh > Response.txt

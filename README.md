@@ -1,6 +1,7 @@
 # DNStest
 
-We have 1095 adult websites to test.
+We found about 16000 adult websites with content of pornography, gambling, and others
+We choose 1095 from it and test with DNS parental control tools
 
 Citation:
 

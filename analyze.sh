@@ -20,4 +20,4 @@ then
   echo "$domainName" >> $y;
 fi
 done
-printf "%d/%d domains got blocked" "$numOfDomainsBlocked" "$numOfDomains" >> y;
+printf "%d/%d domains got blocked" "$numOfDomainsBlocked" "$numOfDomains" >> $y;

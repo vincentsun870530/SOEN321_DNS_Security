@@ -1,9 +1,12 @@
 #!/bin/bash
-printf > yandexPornBlacklist.txt;
-echo These domains are blocked: >> yandexPornBlacklist.txt;
+read -p "Enter the txt file to analyze: " x;
+read -p "Enter result output txt file: " y;
+
+printf > y;
+echo These domains are blocked: >> y;
 numOfDomains=0;
 numOfDomainsBlocked=0;
-for i in `cat testPornDomains.txt`; 
+for i in `cat $x`; 
 do 
 let "numOfDomains++";
 domainLookupOutput=$(nslookup $i);
@@ -14,7 +17,7 @@ redirect=$(echo "$addressLookupOutput" | grep "name = " | awk '{print $4}');
 if [ "$redirect" == "hit-adult.opendns.com." ] || [ "$redirect" == "safe2.yandex.ru." ]
 then
   let "numOfDomainsBlocked++";
-  echo "$domainName" >> yandexPornBlacklist.txt;
+  echo "$domainName" >> $y;
 fi
 done
-printf "%d/%d domains got blocked" "$numOfDomainsBlocked" "$numOfDomains" >> yandexPornBlacklist.txt;
+printf "%d/%d domains got blocked" "$numOfDomainsBlocked" "$numOfDomains" >> y;

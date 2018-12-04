@@ -1,1 +1,1 @@
-awk '!seen[$0]++' pornDomains.txt >> filteredPornDomains.txt
+awk '!seen[$0]++' DomainNames.txt >> filteredDomains.txt

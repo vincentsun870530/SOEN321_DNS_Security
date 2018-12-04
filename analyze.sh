@@ -1,9 +1,9 @@
 #!/bin/bash
-printf > blocked_domains.txt;
-echo These domains are blocked: >> blocked_domains.txt;
+printf > nortonPornBlacklist.txt;
+echo These domains are blocked: >> nortonPornBlacklist.txt;
 numOfDomains=0;
 numOfDomainsBlocked=0;
-for i in `cat domains.txt`; 
+for i in `cat filteredPornDomains.txt`; 
 do 
 let "numOfDomains++";
 domainLookupOutput=$(nslookup $i);
@@ -14,7 +14,7 @@ redirect=$(echo "$addressLookupOutput" | grep "name = " | awk '{print $4}');
 if [ "$redirect" == "hit-adult.opendns.com." ]
 then
   let "numOfDomainsBlocked++";
-  echo "$domainName" >> blocked_domains.txt;
+  echo "$domainName" >> nortonPornBlacklist.txt;
 fi
 done
-printf "%d/%d domains got blocked" "$numOfDomainsBlocked" "$numOfDomains" >> blocked_domains.txt;
+printf "%d/%d domains got blocked" "$numOfDomainsBlocked" "$numOfDomains" >> nortonPornBlacklist.txt;
